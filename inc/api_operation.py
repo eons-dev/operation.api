@@ -7,10 +7,11 @@ class operation(apie.Endpoint):
 
         this.requiredMethods.append(f"{this.name}_implementation")
 
-        # Everything that can change an operation should be specified in the request.
+        # Everything that can change an operation should be specified in the request...
         this.fetchFrom = [
             'this',
             'args',
+			'precursor', # ...but just in case...
             'request_args',
             'request_form',
             'request_json',
